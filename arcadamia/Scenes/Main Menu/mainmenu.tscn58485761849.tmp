@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://dikicyty37hsh"]
+
+[ext_resource type="FontFile" uid="uid://b70prexsph0lw" path="res://Fonts/retro/retro.ttf" id="1_3m7uw"]
+[ext_resource type="Texture2D" uid="uid://dv8k7tlf3wbx2" path="res://Assets/backgrounds/vaporwave wallpapers/1585966.jpg" id="1_i7p33"]
+[ext_resource type="Script" uid="uid://brsbbq0ikwqpc" path="res://Scenes/Main Menu/buttons.gd" id="2_6uoj6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6uoj6"]
+texture = ExtResource("1_i7p33")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i7p33"]
+bg_color = Color(0.431373, 0.658824, 0.27451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uoj6"]
+bg_color = Color(0.628303, 0.573304, 0.692098, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mainmenubckgrnd" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6uoj6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.5
+offset_top = -140.0
+offset_right = 145.5
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+script = ExtResource("2_6uoj6")
+
+[node name="startbtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3m7uw")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_i7p33")
+text = "Start"
+
+[node name="resumebtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3m7uw")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6uoj6")
+text = "Resume
+"
+
+[node name="scoreboardbtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3m7uw")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6uoj6")
+text = "Scoreboard"
+
+[node name="optionsbtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3m7uw")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6uoj6")
+text = "Options"
+
+[node name="exitbtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_3m7uw")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_6uoj6")
+text = "Exit"
